@@ -1,0 +1,35 @@
+---
+title: "MechaCarChallenge"
+output: html_document
+date: '2022-07-09'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r cars}
+library(ggplot2)
+library(tidyverse)
+library(dbplyr)
+```
+
+
+```{r csv read echo=FALSE}
+mecha_mpg <- read.csv(file="MechaCar_mpg.csv")
+```
+
+```{r}
+head(mecha_mpg)
+```
+
+```{r}
+model <- lm(mpg ~ AWD + ground_clearance + spoiler_angle + vehicle_weight + vehicle_length,data=mecha_mpg) #generate multiple linear regression model
+model
+```
+
+```{r}
+model
+summary(model) #generate summary statistics
+```
