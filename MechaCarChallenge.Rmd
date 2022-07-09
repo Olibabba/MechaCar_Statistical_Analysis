@@ -16,8 +16,8 @@ library(dbplyr)
 ```
 
 
-```{r csv read echo=FALSE}
-mecha_mpg <- read.csv(file="MechaCar_mpg.csv")
+```{r label=read_mpg echo=FALSE}
+mecha_mpg <- data.frame(read.csv(file="MechaCar_mpg.csv"))
 ```
 
 ```{r}
@@ -32,4 +32,26 @@ model
 ```{r}
 model
 summary(model) #generate summary statistics
+```
+```{r}
+suspension <- data.frame(read.csv(file="Suspension_Coil.csv"))
+```
+
+```{r}
+head(suspension)
+```
+
+```{r}
+
+total_summary  <-  summarize(suspension, mean=mean(suspension$PSI), median=median(suspension$PSI), variance=var(suspension$PSI), SD=sd(suspension$PSI))
+
+total_summary
+```
+
+```{r}
+typeof(mecha_mpg)
+```
+
+```{r}
+
 ```
