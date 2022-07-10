@@ -56,5 +56,25 @@ lot_summary
 ```
 
 ```{r}
+t.test(suspension$PSI, mu=1500)
+```
+
+```{r}
+t.test(subset(suspension$PSI, suspension$Manufacturing_Lot =='Lot1'), mu=1500)
+```
+
+```{r}
+t.test(subset(suspension$PSI, suspension$Manufacturing_Lot =='Lot2'), mu=1500)
+```
+
+```{r}
+t.test(subset(suspension$PSI, suspension$Manufacturing_Lot =='Lot3'), mu=1500)
+```
+
+```{r}
+
+```
+
+```{r}
 
 ```
