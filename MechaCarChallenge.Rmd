@@ -49,7 +49,10 @@ total_summary
 ```
 
 ```{r}
-typeof(mecha_mpg)
+by_susp <- suspension %>% group_by(Manufacturing_Lot)
+psi_stats <- by_susp %>% summarize(mean=mean(PSI), median=median(PSI), variance=var(PSI), SD=sd(PSI))
+lot_summary <- data.frame(psi_stats)
+lot_summary
 ```
 
 ```{r}
