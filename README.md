@@ -29,23 +29,23 @@ Q: The design specifications for the MechaCar suspension coils dictate that the 
 A: The variance for all lots combined is well within the bounds of 100 lbs/in^2. However when we examine each lot individually we see that lot 1 and lot 2 have very low variability (<10 lbs/in^2) but lot 3 has an unacceptable variance of about 170 lbs/in^2.
 
 ## T-Tests on Suspension Coils
-All lots interpretation -- with a p-value = 0.06028 we do not have sufficient evidence to reject the null hypothesis, though the p-value is so close to .05 one cannot shake the feeling that the mean is signicficantly different. But upon closer inspection we see that the mean of all lots PSI is 1498.78 which is indeed very close to 1500.
-![All Lot T-Test](https://github.com/Olibabba/MechaCar_Statistical_Analysis/blob/main/Resources/lot_summary.png)
+All lots interpretation -- with a p-value = 0.06028 we do not have sufficient evidence to reject the null hypothesis. The p-value is very close to .05 and this gives us pause to consider whether the mean could actually be statistically different. But upon closer inspection we see that the mean of all lots PSI is 1498.78 which is for all intents and purposes not statistically different than 1500.
+![All Lot T-Test](https://github.com/Olibabba/MechaCar_Statistical_Analysis/blob/main/Resources/ttest_alllots.png)
 
-Lot 1 -- with a p value of 1, we can say with some certainty that the means are statistically similar.
+Lot 1 -- with a p value of 1, we can say with certainty that the means are statistically similar.
 ![Lot 1 T-Test](https://github.com/Olibabba/MechaCar_Statistical_Analysis/blob/main/Resources/ttest_lot1.png)
 
 lot 2 -- with a p value of 0.6072, we can say with some certainty that the means are statistically similar.
 ![Lot 2 T-Test](https://github.com/Olibabba/MechaCar_Statistical_Analysis/blob/main/Resources/ttest_lot2.png)
 
-lot 3 -- with a p-value of 0.04168, we can say that the means are statistically different.
+lot 3 -- with a p-value of 0.04168, we can conclude that the means are statistically different.
 ![Lot 3 T-Test](https://github.com/Olibabba/MechaCar_Statistical_Analysis/blob/main/Resources/ttest_lot3.png)
 
 ## Study Design: MechaCar vs Competition
 
 With the Mechacar well analyzed we think it is time to compare against our competitors. This will ideally be a comparison that we can show the public to provide statistical proof that Mechacar out performs the competition. 
 
-In these times of inflation, high gas prices, and disrupted supply chains, there are three primary metrics we recommend comparing: cost, fuel-efficiency, and reliability (in terms of frequency of repairs needed as well as speed of repairs or availabilty of parts)
+In these times of inflation, high gas prices, and disrupted supply chains, there are four primary metrics we recommend comparing: cost, fuel-efficiency,  reliability (in terms of frequency of repairs needed), and repairability (in terms of speed of repairs or availabilty of parts)
 
 Our null hypothesis will be that there is no difference between Mechacar and our competitors, and our alternative hypothesis is that Mechacar is cheaper, more fuel efficient, and more reliable. 
 
